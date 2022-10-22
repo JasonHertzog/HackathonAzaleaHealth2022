@@ -6,5 +6,20 @@ Happy face scale: https://media.istockphoto.com/vectors/emoticons-mood-scale-vec
 Mental Health information: https://thegracefulpatient.wordpress.com/2017/12/15/a-simple-mental-health-pain-scale/
 tired.jpg: https://cdn.xxl.thumbs.canstockphoto.com/a-tired-businesswoman-struggling-to-stay-awake-at-workplace-overtime-a-very-tired-young-stock-footage_csp45060312.jpg
 
-Nearly everything happens in main. I wanted to split it all up a bit more, but I burned too much time troubleshooting
-my kivy errors early on.
+Nearly everything happens in main. I wanted to split it all up a bit more, but I burned too much time troubleshooting my kivy errors early on.
+
+Demo through pictures.
+
+Menu
+![](screenshot_showcase/Menu.png)
+
+Name and age submission
+![](screenshot_showcase/Name_and_age.png)
+
+Pain Management
+![](screenshot_showcase/pain_management.png)
+
+Suicide Prevention
+![](screenshot_showcase/Suicide_prevention.png)
+
+Explore the app to see more!
