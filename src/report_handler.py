@@ -7,10 +7,7 @@ import datetime
 
 
 def check_file_exists(self, file_name):
-    if os.path.exists(file_name):
-        return True
-    else:
-        return False
+    return os.path.exists(file_name)
 
 
 def create_file(self, file_name):
@@ -36,29 +33,26 @@ def file_handler(self, name, age):
         self.append_to_file(file_name, name, age)
 
 
-def add_pain_report(self, name, age, level, confidence):
-    print("(Debug) Name: " + name + " Age: " + str(age) + " Level: " + str(level) + " Confidence: " + str(confidence))
+def add_report(self, name, age, report_type, report_data, confidence):
     file_name = 'patient_' + name + '.csv'
     with open(file_name, 'a') as f:
-        print("File Updated")
         writer = csv.writer(f)
-        writer.writerow(['Pain', name, age, level, confidence])
+        writer.writerow([report_type, name, age, report_data, confidence])
+    print("File Updated")
+
+
+def add_pain_report(self, name, age, level, confidence):
+    print(f"(Debug) Name: {name} Age: {age} Level: {level} Confidence: {confidence}")
+    self.add_report(name, age, 'Pain', level, confidence)
 
 
 def add_drowsiness_report(self, name, age, level, confidence):
-    file_name = 'patient_' + name + '.csv'
-    with open(file_name, 'a') as f:
-        print("File Updated")
-        writer = csv.writer(f)
-        writer.writerow(['Drowsiness', name, age, level, confidence])
+    self.add_report(name, age, 'Drowsiness', level, confidence)
 
 
 def add_mental_health_report(self, name, age, mental_health_level, confidence):
-    file_name = 'patient_' + name + '.csv'
-    with open(file_name, 'a') as f:
-        print("File Updated")
-        writer = csv.writer(f)
-        writer.writerow(['Mental Health', name, age, mental_health_level, confidence])
+    self.add_report(name, age, 'Mental Health', mental_health_level, confidence)
+
 
 
 # This will likely never be used. It is here just in case.
